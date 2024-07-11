@@ -1,0 +1,117 @@
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%)
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color: var(--Very-light-gray);
+}
+
+.container{
+    margin: 30px 18px;
+}
+.card{
+    width: 340px;
+    height: 430px;
+    padding: 40px;
+}
+
+.card__title{
+   padding: 30px 0;
+   color: var(--Very-light-gray);
+   font-family: "Big Shoulders Display", sans-serif;
+   font-size: 1.5em;
+}
+
+.card__paragraph{
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 17px;
+    color: var(--Transparent-white);
+    line-height: 1.7;
+}
+
+.btn{
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: var(--Very-light-gray);
+    border: none;
+    border-radius: 30px;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+.card--sedans{
+    background-color: var(--Bright-orange);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    .btn{
+        color: var(--Bright-orange);
+    }
+}
+
+.card--suvs{
+    background-color: var(--Dark-cyan);
+    .btn{
+        color: var(--Dark-cyan);
+    }
+}
+
+.card--luxury{
+    background-color: var(--Very-dark-cyan);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    .btn{
+        color: var(--Very-dark-cyan);
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
+@media (min-width:768px) {
+    .container{
+        display: flex;
+        margin: 10% 25%;
+    }
+    
+    .card--sedans{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
+    .card--luxury{
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+    .btn:hover{
+        background-color: transparent;
+        color: var(--Very-light-gray);
+        border: 1px solid var(--Very-light-gray);
+        cursor: pointer;
+    }
+}
+
+@media (width:768px) {
+    .container{
+        margin: 20% 2%;
+    }
+    .card{
+        width: 300px;
+        height: 480px;
+    }
+}
