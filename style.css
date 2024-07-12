@@ -87,7 +87,12 @@ body{
 @media (min-width:768px) {
     .container{
         display: flex;
-        margin: 10% 25%;
+        justify-content: center;
+        margin: 120px 0;
+    }
+    .card{
+        width: 310px;
+        height: 450px;
     }
     
     .card--sedans{
